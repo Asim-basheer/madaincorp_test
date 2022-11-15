@@ -1,1 +1,98 @@
 // my own style
+
+.btn {
+  &:focus {
+    opacity: 0.5;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.category-btn {
+  background-color: #3181e0;
+  color: $clrWhite;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.2rem 2.5rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+
+  @include respond(sm) {
+    font-size: 1rem;
+    padding: 0.2rem 1.5rem;
+  }
+}
+.users {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 50rem;
+
+  @include respond(sm) {
+    padding: 1rem;
+  }
+
+  &__category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @include respond(xs) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem;
+    border: 0.2rem solid $clrBlack;
+    border-radius: 0.6rem;
+
+    @include respond(xs) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include respond(xs) {
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto 2rem;
+    }
+
+    h3 {
+      font-size: 4rem;
+      width: 7.5rem;
+      height: 7.5rem;
+      border-radius: 50%;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 7.5rem;
+      background-color: $clrPink;
+      color: $clrWhite;
+    }
+    p {
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+  }
+}
